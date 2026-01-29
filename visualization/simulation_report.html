@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaCrop C++ Simulation Results Analysis</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 20px;
+        }
+        .header h1 {
+            color: #2E7D32;
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .header p {
+            color: #666;
+            font-size: 1.2em;
+            margin: 10px 0 0 0;
+        }
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #4CAF50;
+            border-radius: 4px;
+        }
+        .section h2 {
+            color: #2E7D32;
+            margin-top: 0;
+            font-size: 1.8em;
+        }
+        .case-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .case-card h3 {
+            color: #388E3C;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stat-box {
+            background-color: #E8F5E9;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #2E7D32;
+        }
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        .visualization {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .visualization img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .caption {
+            color: #666;
+            font-style: italic;
+            margin: 10px 0 0 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .note {
+            background-color: #FFF3E0;
+            border-left: 4px solid #FF9800;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-top: 2px solid #4CAF50;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AquaCrop C++ Simulation Results Analysis</h1>
+            <p>Comprehensive Analysis of Crop Simulation Results</p>
+        </div>
+
+        <div class="section">
+            <h2>Introduction</h2>
+            
+        <p>This report presents the results of AquaCrop C++ simulations. The AquaCrop model
+        is a crop-water productivity model developed by FAO that simulates yield response
+        of herbaceous crops to water availability.</p>
+        
+        <p><strong>Current Status:</strong> The C++ implementation is in <em>placeholder mode</em>,
+        meaning results are generated with simulated formulas rather than full AquaCrop algorithms.
+        The infrastructure is complete, but core simulation algorithms (soil water balance,
+        crop growth models, stress factors) are still being implemented.</p>
+        
+        </div>
+
+        <div class="section">
+            <h2>Simulation Results Summary</h2>
+            
+        <p>The following test cases were simulated:</p>
+        <ul>
+            <li><strong>case-01:</strong> 14-day placeholder simulation</li>
+            <li><strong>case-02:</strong> 14-day placeholder simulation</li>
+            <li><strong>case-midwest-corn:</strong> U.S. Midwest corn test case (pending results)</li>
+        </ul>
+        
+        </div>
+
+        <div class="case-card">
+            <h3>case-01</h3>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-value">14</div>
+                    <div class="stat-label">Simulation Days</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">310.0</div>
+                    <div class="stat-label">Final Biomass (kg/ha)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">63.0%</div>
+                    <div class="stat-label">Max Canopy Cover</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">74.2</div>
+                    <div class="stat-label">Total Transpiration (mm)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">5.30</div>
+                    <div class="stat-label">Avg Transpiration (mm/day)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">13.93</div>
+                    <div class="stat-label">Biomass Growth Rate (kg/ha/day)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <h3>case-02</h3>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-value">14</div>
+                    <div class="stat-label">Simulation Days</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">310.0</div>
+                    <div class="stat-label">Final Biomass (kg/ha)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">63.0%</div>
+                    <div class="stat-label">Max Canopy Cover</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">74.2</div>
+                    <div class="stat-label">Total Transpiration (mm)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">5.30</div>
+                    <div class="stat-label">Avg Transpiration (mm/day)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">13.93</div>
+                    <div class="stat-label">Biomass Growth Rate (kg/ha/day)</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <tr>
+                <th>Case</th>
+                <th>Days</th>
+                <th>Final Biomass (kg/ha)</th>
+                <th>Max Canopy (%)</th>
+                <th>Total Transp. (mm)</th>
+                <th>Avg Transp. (mm/day)</th>
+                <th>Growth Rate (kg/ha/day)</th>
+            </tr>
+
+            <tr>
+                <td><strong>case-01</strong></td>
+                <td>14</td>
+                <td>310.0</td>
+                <td>63.0</td>
+                <td>74.2</td>
+                <td>5.30</td>
+                <td>13.93</td>
+            </tr>
+
+            <tr>
+                <td><strong>case-02</strong></td>
+                <td>14</td>
+                <td>310.0</td>
+                <td>63.0</td>
+                <td>74.2</td>
+                <td>5.30</td>
+                <td>13.93</td>
+            </tr>
+
+        </table>
+
+        <div class="section">
+            <h2>Visualizations</h2>
+            <p>The following visualizations provide detailed analysis of simulation results.</p>
+        </div>
+
+        <div class="visualization">
+            <h3>Case-01 Dashboard</h3>
+            <img src="visualization/case-01_dashboard.png" alt="Case-01 Dashboard">
+            <p class="caption">Comprehensive dashboard showing biomass accumulation, canopy development, transpiration, and soil moisture dynamics for case-01.</p>
+        </div>
+
+        <div class="visualization">
+            <h3>Case-02 Dashboard</h3>
+            <img src="visualization/case-02_dashboard.png" alt="Case-02 Dashboard">
+            <p class="caption">Comprehensive dashboard showing biomass accumulation, canopy development, transpiration, and soil moisture dynamics for case-02.</p>
+        </div>
+
+        <div class="visualization">
+            <h3>Case-01 Growth Analysis</h3>
+            <img src="visualization/case-01_growth.png" alt="Case-01 Growth Analysis">
+            <p class="caption">Detailed crop growth curves showing biomass accumulation, canopy development, transpiration, and soil moisture.</p>
+        </div>
+
+        <div class="visualization">
+            <h3>Case-01 Water Balance</h3>
+            <img src="visualization/case-01_water.png" alt="Case-01 Water Balance">
+            <p class="caption">Water balance analysis including cumulative water use, water use efficiency, and growth phases.</p>
+        </div>
+
+        <div class="visualization">
+            <h3>Case Comparison</h3>
+            <img src="visualization/comparison.png" alt="Case Comparison">
+            <p class="caption">Side-by-side comparison of case-01 and case-02 results.</p>
+        </div>
+
+        <div class="note">
+            <strong>Note:</strong> These results are from placeholder simulations. The AquaCrop C++ implementation is still under development. Once the core algorithms are implemented, results will reflect realistic crop growth and soil water balance calculations based on FAO AquaCrop methodology.
+        </div>
+
+        <div class="section">
+            <h2>Analysis and Conclusions</h2>
+            
+        <h3>Key Observations</h3>
+        <ul>
+            <li><strong>Infrastructure Ready:</strong> The build system, file I/O, and project parsing 
+            infrastructure are fully operational.</li>
+            <li><strong>Test Case Generation:</strong> Midwest corn test case with realistic parameters 
+            has been successfully created.</li>
+            <li><strong>Visualization Tools:</strong> Comprehensive visualization scripts are available 
+            for analyzing results.</li>
+            <li><strong>Placeholder Results:</strong> Current results use simulated formulas rather than 
+            full AquaCrop algorithms.</li>
+        </ul>
+        
+        <h3>Next Steps</h3>
+        <ul>
+            <li>Implement soil water balance module in C++</li>
+            <li>Add crop growth models</li>
+            <li>Include stress factor calculations</li>
+            <li>Validate against FAO AquaCrop reference</li>
+            <li>Test with real-world data</li>
+        </ul>
+        
+        <h3>Technical Details</h3>
+        <p><strong>Build System:</strong> CMake with C++17 standard</p>
+        <p><strong>Visualization:</strong> Python with matplotlib and seaborn</p>
+        <p><strong>Data Format:</strong> Placeholder format with daily biomass, canopy, transpiration, and soil moisture</p>
+        
+        </div>
+
+        <div class="footer">
+            <p>Report generated on 2026-01-29 20:42:32</p>
+            <p>AquaCrop C++ Simulation Results Visualization</p>
+        </div>
+    </div>
+</body>
+</html>

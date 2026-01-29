@@ -1,2 +1,3 @@
 case-01/project.ACp
-case-02/project.ACp2case-midwest-corn/project.ACp
+case-02/project.ACp
+case-midwest-corn/project.ACp

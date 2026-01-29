@@ -1,0 +1,14 @@
+Soil profile for case-midwest-corn
+SiltLoam_Midwest
+Silt Loam
+1.35
+2.8
+0.48
+0.32
+0.14
+75
+4
+30 0.32 0.14 0.48
+40 0.34 0.16 0.5
+50 0.36 0.18 0.52
+60 0.38 0.2 0.54

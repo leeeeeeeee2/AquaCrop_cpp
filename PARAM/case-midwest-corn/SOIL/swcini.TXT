@@ -1,0 +1,6 @@
+Initial soil water content for case-midwest-corn
+4
+0.32
+0.34
+0.36
+0.38

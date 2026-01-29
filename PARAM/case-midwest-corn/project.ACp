@@ -1,0 +1,51 @@
+case-midwest-corn - U.S. Midwest Corn Production
+7.2
+1
+1
+1
+1
+1
+1
+1
+Climate data for case-midwest-corn
+climate.TXT
+CLIM/
+Temperature data for case-midwest-corn
+temperature.TXT
+CLIM/
+ET0 data for case-midwest-corn
+eto.TXT
+CLIM/
+Rainfall data for case-midwest-corn
+rain.TXT
+CLIM/
+CO2 data for case-midwest-corn
+co2.TXT
+CLIM/
+Calendar data for case-midwest-corn
+calendar.TXT
+CLIM/
+Crop data for case-midwest-corn
+crop.TXT
+CROP/
+Irrigation data for case-midwest-corn
+irrigation.TXT
+IRRIG/
+Management data for case-midwest-corn
+management.TXT
+MANAGE/
+Soil data for case-midwest-corn
+soil.TXT
+SOIL/
+Groundwater data for case-midwest-corn
+groundwater.TXT
+GWT/
+InitialSWC data for case-midwest-corn
+swcini.TXT
+SOIL/
+Offseason data for case-midwest-corn
+offseason.TXT
+OFF/
+Observations data for case-midwest-corn
+observations.TXT
+OBS/

@@ -1,0 +1,8 @@
+# AquaCrop C++ configuration file
+
+@PACKAGE_INIT@
+
+set_and_check(AquaCrop_INCLUDE_DIR "@CMAKE_INSTALL_PREFIX@/include")
+set_and_check(AquaCrop_LIB_DIR "@CMAKE_INSTALL_PREFIX@/lib")
+
+check_required_components(AquaCrop)

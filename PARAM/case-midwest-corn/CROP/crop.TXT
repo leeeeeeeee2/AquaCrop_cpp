@@ -1,0 +1,12 @@
+Crop parameters for case-midwest-corn
+Maize
+C4
+Seed
+8.0
+0.76
+CalendarDays
+120
+0.48
+0.013
+0.003
+1.05

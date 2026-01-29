@@ -1,0 +1,8 @@
+# Parameters for case-midwest-corn
+crop_type=Maize
+planting_date=2024-05-01
+harvest_date=2024-10-15
+location=Iowa, USA
+soil_type=SiltLoam_Midwest
+management=rainfed
+created=2026-01-29T20:31:29.799418

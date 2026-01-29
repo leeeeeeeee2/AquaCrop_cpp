@@ -1,0 +1,3 @@
+Irrigation schedule for case-midwest-corn
+0
+1.0

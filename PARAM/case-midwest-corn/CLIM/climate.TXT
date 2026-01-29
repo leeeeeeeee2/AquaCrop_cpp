@@ -1,0 +1,5 @@
+Climate data for case-midwest-corn
+Iowa, USA
+41.9 -93.6
+230
+410

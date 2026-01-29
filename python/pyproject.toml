@@ -1,0 +1,84 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "pybind11", "cmake", "ninja"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aquacrop"
+version = "1.0.0"
+description = "Python wrapper for the FAO AquaCrop crop-water productivity model"
+readme = "../README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "AquaCrop C++ Developers", email = "developers@example.com"}
+]
+keywords = [
+    "agriculture",
+    "crop",
+    "water",
+    "modeling",
+    "simulation",
+    "aquacrop",
+    "fao",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: C++",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Agriculture",
+]
+dependencies = [
+    "pybind11>=2.6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov",
+    "black",
+    "flake8",
+    "mypy",
+]
+docs = [
+    "sphinx",
+    "sphinx-rtd-theme",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-org/AquaCrop_cpp"
+Repository = "https://github.com/your-org/AquaCrop_cpp"
+Issues = "https://github.com/your-org/AquaCrop_cpp/issues"
+Documentation = "https://aquacrop-cpp.readthedocs.io/
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["tests", "tests.*"]
+
+[tool.black]
+line-length = 88
+target-version = ["py38", "py39", "py310", "py311"]
+include = "\\.pyi?$"
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = "E203"
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true

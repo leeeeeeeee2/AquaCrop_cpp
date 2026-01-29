@@ -1,0 +1,6 @@
+This repository contains a C++ port and modifications of AquaCrop.
+
+The original AquaCrop software is developed by KU Leuven and collaborators
+and is licensed under the BSD-3-Clause License.
+
+This project does not claim authorship over the original AquaCrop model.

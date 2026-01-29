@@ -1,86 +1,178 @@
-# AquaCrop-cpp
+# AquaCrop C++
 
-C++ port of the FAO AquaCrop crop-water productivity model.
+A high-performance C++ implementation of the FAO AquaCrop crop-water productivity model.
 
-This repository provides a lightweight C++ scaffolding for the AquaCrop model, along with guidance on how to contribute and how to document code provenance.
+## What is AquaCrop?
+
+AquaCrop is a crop-water productivity model developed by the Food and Agriculture Organization (FAO) of the United Nations. It simulates the yield response of herbaceous crops to water availability and is designed to be:
+
+- **Physically based**: Uses soil-water balance and plant growth processes
+- **Water-driven**: Focuses on the relationship between water use and crop productivity
+- **User-friendly**: Balance between accuracy and simplicity for practical applications
+- **Globally applicable**: Validated across diverse climatic and agricultural conditions
+
+AquaCrop C++ provides a modern, performant implementation of the AquaCrop model, suitable for:
+- Large-scale simulations and sensitivity analyses
+- Integration into decision support systems
+- Research applications requiring fast computation
+- Embedded systems and cloud deployment
+
+## Features
+
+- **Complete Crop Simulation**: Models crop growth, development, and yield formation
+- **Soil Water Balance**: Tracks soil moisture dynamics with multiple soil layers
+- **Climate Integration**: Handles temperature, precipitation, evapotranspiration, and CO2 effects
+- **Irrigation Management**: Supports various irrigation strategies and scheduling
+- **Multiple Crop Types**: Wheat, maize, rice, cotton, soybeans, and more
+- **Parameter Flexibility**: Extensive configuration options for soils, crops, and management
+- **Result Analysis**: Comprehensive output files with daily and seasonal results
+
+## Credits
+
+This project is a C++ port of the original Fortran-based AquaCrop model. We express our sincere gratitude to the original authors and maintainers at [KUL-RSDA/AquaCrop](https://github.com/KUL-RSDA/AquaCrop) for their excellent work on the reference implementation.
+
+```
+If you use this software, please cite:
+- Steduto, P., Hsiao, T.C., Raes, D., Fereres, E. (2009) AquaCrop—The FAO
+  crop model to simulate yield response to water: I. Concepts and
+  underlying principles. Agron. J. 101(3): 426–437.
+- Raes, D., Steduto, P., Hsiao, T.C., Fereres, E. (2009) AquaCrop—The
+  FAO crop model to simulate yield response to water: II. Main algorithms
+  and software description. Agron. J. 101(3): 438–447.
+```
+
+## Directory Structure
+
+```
+AquaCrop_cpp/
+├── src/                    # Source code
+│   ├── main.cpp           # Entry point
+│   ├── Global.cpp         # Global constants and utilities
+│   ├── StartUnit.cpp      # Program initialization
+│   ├── Run.cpp            # Simulation execution
+│   ├── Simul.cpp          # Simulation modules
+│   ├── ProjectInput.cpp   # Project file parsing
+│   └── ...                # Other modules
+├── include/               # Public headers
+│   └── AquaCrop/          # Header files organized by module
+├── python/                # Python wrapper
+│   ├── _core.cpp          # pybind11 bindings
+│   ├── aquacrop/          # Python package
+│   ├── setup.py           # Installation script
+│   └── pyproject.toml     # Modern package config
+├── docs/                  # Documentation
+│   ├── installation.md    # Build instructions
+│   ├── usage.md           # Usage guide
+│   ├── architecture.md    # Model architecture
+│   ├── api.md             # API reference
+│   └── README.md          # Documentation overview
+├── PARAM/                 # Parameter files
+├── LIST/                  # Project lists
+├── test/                  # Test cases
+├── CMakeLists.txt         # CMake build configuration
+└── LICENSE                # MIT License
+```
 
 ## Quick Start
 
-- Prerequisites: a modern C++ toolchain and CMake (3.x or newer).
-- Build:
+### Prerequisites
 
-```
-mkdir build
-cd build
+- C++17 compatible compiler (GCC 9+, Clang 10+, MSVC 2019+)
+- CMake 3.10 or newer
+- For Python wrapper: Python 3.8+ and pybind11
+
+### Building (C++)
+
+```bash
+# Clone the repository
+git clone https://github.com/your-org/AquaCrop_cpp.git
+cd AquaCrop_cpp
+
+# Create build directory
+mkdir build && cd build
+
+# Configure
 cmake ..
+
+# Build
 cmake --build .
-```
-- Run (example):
 
-```
-./aquacrop_main
+# Run tests
+ctest --output-on-failure
 ```
 
-## Running and Building
-- The project is structured to be portable across Linux/macOS. Windows users may need to adapt build steps to their toolchain.
-- The build outputs depend on the CMake configuration (static vs shared libraries, executables, etc.).
+### Building with Python Wrapper
 
-## Directory Overview
- - src/: source code for core components (soil, crop, climate, irrigation, etc.).
- - include/: public headers.
- - tests/: unit tests.
- - docs/: documentation sources and generated content.
- - tools/: helper utilities and scripts (if any).
- - CMakeLists.txt: build configuration.
- - LICENSE: licensing information.
- 
-  classic/: Inplace placeholder folder for the classic Fortran AquaCrop model. This folder is not uploaded to the repository by design. If you need the classic Fortran sources, clone them manually into this folder in your local checkout and begin development there. The project will disable uploads to this folder.
+```bash
+# From the repository root
+mkdir build && cd build
 
-## Documentation and Provenance
-- This repository documents code provenance and AI-assisted edits to improve transparency.
-- See the AI and Code Provenance section for details.
-- Documentation about the repository structure and contribution guidelines lives in the docs/ directory.
+# Configure with Python support
+cmake .. -DWITH_PYTHON=ON
 
-### AI and Code Provenance
-- Code Origin Policy: Distinguishes human-authored changes from AI-assisted edits. Annotate edits that originated from AI when feasible.
-- AI Code Generator Discriminator: An experimental discriminator that classifies and logs edits produced by AI systems. Includes inputs, scoring, and interpretation guidance.
-- Commit messages may include short provenance notes, e.g. [AI], to improve traceability.
-- See docs/cpp_aquacrop_design.md for the dedicated C++ design document describing design decisions for AquaCrop port.
-- OpenCode agent: See `agent.md` at repository root for an overview of how this agent assists with code and documentation tasks.
+# Build
+cmake --build .
 
-### Documentation of this repository
-- Documentation sources live under docs/: API, design, guides, and tutorials.
-- The structure is lightweight but extensible to support growth.
+# Install Python package
+cd ../python
+pip install -e .
+```
 
-## Docs Structure (initial)
-- See docs/README.md for an overview and contribution guidance.
-- See docs/api.md for API surface reference.
-- See docs/design.md for high-level design notes.
-- See docs/guides/ for contributor guides and tutorials.
-- See docs/cpp_aquacrop_design.md for the C++ design document describing AquaCrop port decisions.
+### Running the Model
 
-## Contributing
-- See CONTRIBUTING.md for guidance on contributing, coding standards, and testing requirements.
-- Run tests via: `ctest --output-on-failure` or the project’s preferred test command.
+1. Create or modify a project file in `PARAM/`
+2. Add the project filename to `LIST/ListProjects.txt`
+3. Run the executable:
+
+```bash
+./build/aquacrop_main
+```
+
+## Documentation
+
+Comprehensive documentation is available in the [docs/](docs/) directory:
+
+- **[Installation Guide](docs/installation.md)**: Detailed build instructions
+- **[Usage Guide](docs/usage.md)**: How to run simulations and interpret results
+- **[Architecture](docs/architecture.md)**: Model design and data flow
+- **[API Reference](docs/api.md)**: Complete API documentation
 
 ## License
-- See LICENSE for licensing information.
 
-## Documentation of this repo
-- Docs live under docs/ with an initial structure:
-  - docs/README.md: overview of the documentation approach and how to contribute.
-  - docs/api.md: API surface reference.
-  - docs/design.md: high-level design decisions and module boundaries.
-  - docs/guides/: usage guides and tutorials.
-- A doc build may output HTML/PDF; see docs/BUILD.txt if present.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Next steps
-- Flesh out docs/api.md with the actual public headers (provide exact API surface once headers are finalized).
-- Implement core module skeletons under include/ and src/ (soil, crop, climate, irrigation).
-- Wire up CI for builds/tests and add a simple example app to validate the library.
-- Expand docs/design.md with diagrams and more detailed interfaces.
-- Use docs/progress_report.md as the living progress snapshot.
-- Ensure AI provenance guidance is aligned with team practices.
+## References
 
-## Acknowledgements 🙏
-This C++ port and its documentation benefited from references and publicly available source materials from the KUL-RSDA AquaCrop project. Many thanks to the authors and maintainers of https://github.com/KUL-RSDA/AquaCrop for the source code and helpful reference material. (@explore)
+### FAO Publications
+
+1. Steduto, P., Hsiao, T.C., Raes, D., Fereres, E. (2009) AquaCrop—The FAO crop model to simulate yield response to water: I. Concepts and underlying principles. Agronomy Journal 101(3): 426-437.
+
+2. Raes, D., Steduto, P., Hsiao, T.C., Fereres, E. (2009) AquaCrop—The FAO crop model to simulate yield response to water: II. Main algorithms and software description. Agronomy Journal 101(3): 438-447.
+
+3. Hsiao, T.C., Heng, L., Steduto, P., Rojas-Lara, B., Raes, D., Fereres, E. (2009) AquaCrop—The FAO crop model to simulate yield response to water: III. Parameterization and testing for maize. Agronomy Journal 101(3): 448-459.
+
+4. Farahani, H.J., Izzi, G., Oweis, T.Y. (2009) Parameterization and evaluation of AquaCrop for full and deficit irrigated cotton. Agronomy Journal 101(3): 469-476.
+
+### Official Resources
+
+- **FAO AquaCrop Website**: https://www.fao.org/aquacrop/
+- **Reference Manual**: AquaCrop Reference Manual (FAO)
+- **Original Repository**: https://github.com/KUL-RSDA/AquaCrop
+
+## Contributing
+
+Contributions are welcome! Please see our [Contributing Guide](docs/guides/CONTRIBUTING.md) for details on:
+- Coding standards
+- Testing requirements
+- Submission process
+- Code of conduct
+
+## Acknowledgments
+
+- FAO for developing the original AquaCrop model
+- KUL-RSDA for the reference Fortran implementation
+- The agricultural modeling community for continuous improvements
+
+---
+
+**Note**: AquaCrop C++ is an independent implementation. While it aims to be consistent with the FAO reference implementation, results may vary slightly due to implementation differences and ongoing development.

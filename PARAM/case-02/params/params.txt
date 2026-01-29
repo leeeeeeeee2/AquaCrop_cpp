@@ -1,0 +1,2 @@
+param1=default_case02
+param2=alternate

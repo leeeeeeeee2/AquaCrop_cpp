@@ -1,0 +1,18 @@
+SIMULATED AquaCrop run (placeholder)
+Days: 14
+
+Day biomass(kg/ha) canopy(%) transpiration(mm) soil_moisture(%)
+Day 1: biomass=115.0, canopy=4.5, transpiration=1.40, soil_moisture=25.7
+Day 2: biomass=130.0, canopy=9.0, transpiration=2.00, soil_moisture=26.4
+Day 3: biomass=145.0, canopy=13.5, transpiration=2.60, soil_moisture=27.1
+Day 4: biomass=160.0, canopy=18.0, transpiration=3.20, soil_moisture=27.8
+Day 5: biomass=175.0, canopy=22.5, transpiration=3.80, soil_moisture=28.5
+Day 6: biomass=190.0, canopy=27.0, transpiration=4.40, soil_moisture=29.2
+Day 7: biomass=205.0, canopy=31.5, transpiration=5.00, soil_moisture=29.9
+Day 8: biomass=220.0, canopy=36.0, transpiration=5.60, soil_moisture=30.6
+Day 9: biomass=235.0, canopy=40.5, transpiration=6.20, soil_moisture=31.3
+Day 10: biomass=250.0, canopy=45.0, transpiration=6.80, soil_moisture=32.0
+Day 11: biomass=265.0, canopy=49.5, transpiration=7.40, soil_moisture=32.7
+Day 12: biomass=280.0, canopy=54.0, transpiration=8.00, soil_moisture=33.4
+Day 13: biomass=295.0, canopy=58.5, transpiration=8.60, soil_moisture=34.1
+Day 14: biomass=310.0, canopy=63.0, transpiration=9.20, soil_moisture=34.8

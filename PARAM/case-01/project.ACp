@@ -1,0 +1,51 @@
+Case 1 - AquaCrop C++ Test Project
+7.2
+1
+1
+14
+1
+14
+1
+14
+Climate data for test case 1
+climate.TXT
+CLIM/
+Temperature data for test case 1
+temperature.TXT
+CLIM/
+Reference evapotranspiration for test case 1
+eto.TXT
+CLIM/
+Rainfall data for test case 1
+rain.TXT
+CLIM/
+CO2 concentration for test case 1
+co2.TXT
+CLIM/
+Calendar data for test case 1
+calendar.TXT
+CLIM/
+Crop parameters for test case 1
+crop.TXT
+CROP/
+Irrigation schedule for test case 1
+irrigation.TXT
+IRRIG/
+Management practices for test case 1
+management.TXT
+MANAGE/
+Soil profile for test case 1
+soil.TXT
+SOIL/
+Groundwater data for test case 1
+groundwater.TXT
+GWT/
+Initial soil water content for test case 1
+swcini.TXT
+SOIL/
+Off-season data for test case 1
+offseason.TXT
+OFF/
+Field observations for test case 1
+observations.TXT
+OBS/

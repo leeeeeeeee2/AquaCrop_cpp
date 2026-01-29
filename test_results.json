@@ -1,0 +1,16 @@
+[
+  {
+    "case_dir": "/workspaces/AquaCrop-cpp/classic/AquaCrop/testcase/case-01",
+    "success": true,
+    "param_path": "/workspaces/AquaCrop-cpp/classic/AquaCrop/testcase/case-01/params.txt",
+    "output": "/workspaces/AquaCrop-cpp/classic/AquaCrop/testcase/case-01/output/result.txt",
+    "log": "/workspaces/AquaCrop-cpp/classic/AquaCrop/testcase/case-01/output/run.log"
+  },
+  {
+    "case_dir": "/workspaces/AquaCrop-cpp/classic/AquaCrop/testcase/case-02",
+    "success": true,
+    "param_path": "/workspaces/AquaCrop-cpp/classic/AquaCrop/testcase/case-02/params.txt",
+    "output": "/workspaces/AquaCrop-cpp/classic/AquaCrop/testcase/case-02/output/result.txt",
+    "log": "/workspaces/AquaCrop-cpp/classic/AquaCrop/testcase/case-02/output/run.log"
+  }
+]

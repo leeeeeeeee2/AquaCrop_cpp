@@ -7,6 +7,7 @@ Contents:
 - Design: docs/design.md
 - Guides: docs/guides/
 - Tutorials and references: docs/guides/tutorials/
+- C++ full documentation: docs/cpp_aquacrop_full_documentation.md
 
 Contributing to docs:
 - Follow the same contribution process as code changes.

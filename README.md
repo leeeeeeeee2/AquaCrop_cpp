@@ -81,3 +81,6 @@ cmake --build .
 - Expand docs/design.md with diagrams and more detailed interfaces.
 - Use docs/progress_report.md as the living progress snapshot.
 - Ensure AI provenance guidance is aligned with team practices.
+
+## Acknowledgements 🙏
+This C++ port and its documentation benefited from references and publicly available source materials from the KUL-RSDA AquaCrop project. Many thanks to the authors and maintainers of https://github.com/KUL-RSDA/AquaCrop for the source code and helpful reference material. (@explore)
